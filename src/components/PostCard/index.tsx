@@ -8,8 +8,8 @@ type Props = {
 
 export default function PostCard({ post }: Props) {
     return (
-        <article className="p-8 transition border border-b-0 bg-black/30 hover:bg-black/50 border-white/10 last:border-b first:rounded-t-lg last:rounded-b-lg backdrop-blur-lg">
-            <Link href={`/post/${post.id}`}>
+        <article className="transition border border-b-0 bg-black/30 hover:bg-black/50 border-white/10 last:border-b first:rounded-t-lg last:rounded-b-lg backdrop-blur-lg">
+            <Link href={`/post/${post.id}`} className="block p-8">
                 <p className="mb-3 font-bold uppercase opacity-60">
                     {new Date(post.created_at).toLocaleDateString()}
                 </p>
