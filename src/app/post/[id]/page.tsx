@@ -3,7 +3,7 @@ import PostNavigation from "@/components/PostNavigation";
 import { getAdjacentPosts, getPostById } from "@/services/services";
 
 type Props = {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 export default async function Page({ params }: Props) {
