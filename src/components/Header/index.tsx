@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Header = () => {
     return (
-        <header className="pt-26 pb-12">
+        <header className="pt-26 pb-18">
             <div className="container flex flex-col items-center gap-8 px-4 mx-auto">
                 <Link href="/">
                     <Image
@@ -15,7 +15,7 @@ const Header = () => {
                         loading="eager" />
                 </Link>
 
-                <h1 className="text-6xl">
+                <h1 className="text-3xl">
                     <Link href="/">Dio Blog</Link>
                 </h1>
             </div>
