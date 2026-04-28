@@ -27,6 +27,11 @@ body {
 }
 
 .text-wrapper {
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
   ul, ol {
     padding-left: 40px;
   }
@@ -41,5 +46,12 @@ body {
 
   a {
     text-decoration: underline;
+  }
+
+  blockquote {
+    border-left: 4px solid var(--color-gradient-1);
+    padding-left: 16px;
+    font-style: italic;
+    margin-block: 12px;
   }
 }

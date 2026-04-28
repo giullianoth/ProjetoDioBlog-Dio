@@ -9,8 +9,8 @@ const Header = () => {
                     <Image
                         src="/dio.svg"
                         className="h-auto w-30"
-                        width={120}
-                        height={60}
+                        width={60}
+                        height={24}
                         alt="Dio Logo"
                         loading="eager" />
                 </Link>
