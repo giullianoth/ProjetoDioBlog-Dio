@@ -1,7 +1,6 @@
 import ErrorMessage from "@/components/ErrorMessage";
 import PostNavigation from "@/components/PostNavigation";
 import { getAdjacentPosts, getPostById } from "@/services/services";
-import { notFound } from "next/navigation";
 
 type Props = {
   params: { id: string };
@@ -9,13 +8,14 @@ type Props = {
 
 export default async function Page({ params }: Props) {
   const { id } = await params;
-  const { post, error } = await getPostById(id);
 
-  if (error || !post) {
-    notFound();
-  }
+  const [postResult, navResult] = await Promise.all([
+    getPostById(id),
+    getAdjacentPosts(id)
+  ]);
 
-  const { prevPost, nextPost } = await getAdjacentPosts(post.created_at);
+  const { post, error } = postResult;
+  const { prevPost, nextPost } = navResult
 
   return (
     <>
